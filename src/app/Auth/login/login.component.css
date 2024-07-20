@@ -5,23 +5,7 @@
     /* margin: 2%; */
     box-sizing: border-box;
 }
-.shape:first-child{
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:last-child{
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
-}
+
 form{
     margin-top: 30px;
     height: 462px;
@@ -83,36 +67,7 @@ input{
     border-radius: 5px;
     cursor: pointer;
 }
-.social{
-  margin-top: 10px;
-  display: flex;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.social div{
-  background: red;
-  width: 150px;
-  border-radius: 3px;
-  padding: 5px 10px 10px 5px;
-  background-color: rgba(255,255,255,0.27);
-  color: #eaf0fb;
-  text-align: center;
-  margin: 8px;
-}
-.social div:hover{
-  background-color: rgba(255,255,255,0.47);
-}
-.social .fb{
-  margin-left: 25px;
-}
-.social i{
-  margin-right: 4px;
-}
 
-.google{
-    position: relative;
-    top: 50%;
-    left: 50%;
+.error{
+    color: red;
 }
-

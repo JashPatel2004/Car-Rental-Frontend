@@ -1,13 +1,14 @@
-<form [formGroup]="loginForm" (ngsubmit)="submitForm()">
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+
     <h3>Login Here</h3>
 
-    <input type="text" placeholder="Email" id="username" formControlName="email">
+    <input type="text" placeholder="Email" formControlName="email">
     <div *ngIf="isValid || loginForm.controls['email'].invalid && (loginForm.controls['email'].dirty || loginForm.controls['email'].touched)">
       <small class="error" *ngIf="loginForm.controls['email'].hasError('required')">Email is required.</small>
       <small class="error" *ngIf="loginForm.controls['email'].hasError('email')">Please enter a valid email address.</small>
     </div>
 
-    <input type="password" placeholder="Password" id="password" formControlName="password">
+    <input type="password" placeholder="Password" formControlName="password">
     <div *ngIf="isValid || loginForm.controls['password'].invalid && (loginForm.controls['password'].dirty || loginForm.controls['password'].touched)">
       <small class="error" *ngIf="loginForm.controls['password'].hasError('required')">Password is required.</small>
       <small class="error" *ngIf="loginForm.controls['password'].hasError('minlength')">Password must be at least 8 characters long.</small>
