@@ -1,0 +1,17 @@
+<form [formGroup]="otpForm" (ngSubmit)="submitOTP()">
+    <h3>OTP Verification</h3>
+
+    <input type="number" placeholder="OTP" id="otp" formControlName="otp">
+    <div *ngIf="isValid || otpForm.controls['otp'].invalid && (otpForm.controls['otp'].dirty || otpForm.controls['otp'].touched)">
+        <small class="error" *ngIf="otpForm.controls['otp'].hasError('required')">OTP is required.</small>
+        <small class="error" *ngIf="otpForm.controls['otp'].hasError('maxLength')">Please enter a valid otp.</small>
+        <small class="error" *ngIf="otpForm.controls['otp'].hasError('minLength')">Please enter a valid otp.</small>
+    </div>
+
+    <button class="submit-btn" type="submit">Verify</button>
+
+    <button type="button" style="background-color: rgba(255,255,255,0.13); color: white;">
+    Resend OTP
+    </button> 
+    
+</form>

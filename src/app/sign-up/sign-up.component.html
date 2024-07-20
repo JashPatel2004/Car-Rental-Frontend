@@ -1,15 +1,41 @@
-<form>
+<form [formGroup] = "signup" (ngSubmit)="submitForm()">
+
     <h3>Sign up Here</h3>
 
-    <input type="text" placeholder="First name" id="First name">
 
-    <input type="text" placeholder="Last name" id="Last name">
+    <input type="text" placeholder="First name" id="First name" formControlName="firstName">
 
-    <input type="text" placeholder="Email" id="username">
+    <div *ngIf="isValid || signup.controls['firstName'].invalid && (signup.controls['firstName'].dirty || signup.controls['firstName'].touched)">
+        <small class="error" *ngIf="signup.controls['firstName'].hasError('required')">First Name is required.</small>
+    </div>
+    
 
-    <input type="password" placeholder="Password" id="password">
+    <input type="text" placeholder="Last name" id="Last name" formControlName="lastName">
+    <div
+        *ngIf="isValid || signup.controls['lastName'].invalid && (signup.controls['lastName'].dirty || signup.controls['lastName'].touched)">
+        <small class="error" *ngIf="signup.controls['lastName'].hasError('required')">
+                    Last Name is required.</small>
+            </div>
 
-    <button class="signup-btn">Sign up</button>
+    <input type="text" placeholder="Email" id="username" formControlName="email">
+    <div
+    *ngIf="isValid || signup.controls['email'].invalid && (signup.controls['email'].dirty || signup.controls['email'].touched)">
+    <small class="error" *ngIf="signup.controls['email'].hasError('required')">Email is
+        required.</small>
+    <small class="error" *ngIf="signup.controls['email'].hasError('email')">Please enter a valid email
+        address.</small>
+</div>
+
+    <input type="password" placeholder="Password" id="password" formControlName="password">
+    <div
+    *ngIf="isValid || signup.controls['password'].invalid && (signup.controls['password'].dirty || signup.controls['password'].touched)">
+    <small class="error" *ngIf="signup.controls['password'].hasError('required')">Password is
+        required.</small>
+    <small class="error" *ngIf="signup.controls['password'].hasError('minlength')">Password must be at
+        least 8 characters long.</small>
+</div>
+
+    <button class="signup-btn" type="submit">Sign up</button>
 
     <a style="color: white; text-decoration: none;" routerLink="/login">
         <p>Already have an account?</p>
