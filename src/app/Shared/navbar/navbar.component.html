@@ -1,6 +1,25 @@
 <div class="nav">
-    <!-- <img style="height: 50px; width: 50px;" src="assets/logo.png" alt=""> -->
-    <span style="color: white; margin-left: 1vw;">
+
+    <!-- <span *ngIf="isAdmin==false && isClient==false" style="color: white; margin-left: 1vw;">
         Car Rental Service
-    </span>
-</div>
+    </span> -->
+
+   <!-- <div *ngIf="isAdmin==false && isClient==false"> -->
+    <div>
+        <span style="color: white; padding-left: 10px;">Welcome Admin!</span>
+    </div>
+
+    <ul class="inner" style="list-style: none;">
+        <li class="hover">
+            Search
+        </li>
+        <li class="hover">
+            Add car
+        </li>
+        <li class="hover">
+            Bookings
+        </li>
+    </ul>
+   </div>
+
+<!-- </div> -->

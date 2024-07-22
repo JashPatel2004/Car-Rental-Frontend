@@ -1,12 +1,15 @@
 .nav{
     height: 9vh;
     width: 100%;
-    background-color: black;
+    background-color: #262525;
     margin: 0px;
     padding: 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .login{
@@ -25,3 +28,24 @@
     border: none;
     font-size: 2.6vh;
 }
+
+.inner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inner li{
+    padding-right: 2vw;
+}
+
+ul.inner .hover {
+    color: white; 
+    padding: 10px; 
+    transition: color 0.3s ease; 
+}
+
+ul.inner .hover:hover {
+    color: yellow; 
+}
+
