@@ -6,6 +6,7 @@ import { OtpVerifyComponent } from './Auth/otp-verify/otp-verify.component';
 import { AdminDashboardComponent } from './Admin/admin-dashboard/admin-dashboard.component';
 import { ClientDashboardComponent } from './Client/client-dashboard/client-dashboard.component';
 import { adminGuardGuard } from './Auth/admin-guard.guard';
+import { AddCarComponent } from './Admin/add-car/add-car.component';
 
 export const routes: Routes = [
     {path:"",component: LoginComponent},
@@ -14,4 +15,5 @@ export const routes: Routes = [
     {path:"otp",component: OtpVerifyComponent},
     {path:"adminDash",canActivate:[adminGuardGuard],component: AdminDashboardComponent},
     {path:"clientDash",component: ClientDashboardComponent},
+    {path:"add-car",component: AddCarComponent},
 ];

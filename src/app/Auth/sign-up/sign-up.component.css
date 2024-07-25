@@ -2,28 +2,27 @@
 *:before,
 *:after{
     padding: 0%;
-    /* margin: 2%; */
     box-sizing: border-box;
 }
 
 form{
-    height: 480px;
-    width: 400px;
+    height: 80vh;
+    width: 27vw;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
     transform: translate(-50%,-50%);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     top: 50%;
     left: 50%;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
+    border-radius: 1vw;
+    backdrop-filter: blur(1vw);
     border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    padding: 30px 3px;
-    margin-top: 30px;
+    box-shadow: 0 0 5vw rgba(8,7,16,0.6);
+    padding: 3vw 0.3vw;
+    margin-top: 3vw;
 }
 form *{
     font-family: 'Poppins',sans-serif;
@@ -35,7 +34,7 @@ form *{
 form h3{
     font-size: 32px;
     font-weight: 500;
-    line-height: 42px;
+    /* line-height: 42px; */
     text-align: center;
     color: white;
 }
@@ -60,7 +59,7 @@ input{
     /* margin-right: 50px; */
     width: 90%;
     background-color: #ffffff;
-    color: #4d4d4f;
+    color: black;
     padding: 15px 0;
     font-size: 18px;
     font-weight: 600;

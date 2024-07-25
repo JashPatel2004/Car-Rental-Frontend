@@ -1,0 +1,77 @@
+.image-preview img {
+    margin-top: 10px;
+    /* border: 1px solid #ccc; */
+    padding: 5px;
+    border-radius: 50%; 
+    width: 150px; 
+    height: 150px; 
+    object-fit: cover; 
+
+  }
+
+  .imageUpload{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    text-align: center;
+    margin: 10px;
+  }
+
+  .imageUpload input[type="file"] {
+    margin-top: 10px;
+    margin-left: 160px;
+  }
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 50px; 
+    justify-items: center;
+    margin: 50px;
+    column-gap: 20px;
+}
+
+::placeholder {
+    color: white; /* Change the color to your desired value */
+  }
+
+.input{
+    display: block;
+    height: 50px;
+    width: 90%;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    /* margin-top: 8px; */
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+
+.textArea{
+    margin-left: 56px;
+    margin-bottom: 10px;
+    background-color: rgba(255,255,255,0.07);
+    border-radius: 3px;
+    padding: 0 10px;
+    font-size: 14px;
+    font-weight: 300;
+    color: white;
+}
+
+.des{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    background-color: rgba(255,255,255,0.07);
+    /* background-color: white; */
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: large;
+    padding: 5px;
+}

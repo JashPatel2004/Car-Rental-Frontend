@@ -35,7 +35,7 @@
     align-items: center;
 }
 
-.inner li{
+.inner a{
     padding-right: 2vw;
 }
 
@@ -47,5 +47,44 @@ ul.inner .hover {
 
 ul.inner .hover:hover {
     color: yellow; 
+}
+
+.box{
+    position: relative;
+    box-shadow: none;
+}
+
+.input {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    background: none;
+    border: none;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 15px;
+    color: white;
+    outline: none;
+    transition: .5s;
+}
+.box:hover input{
+    width: 200px;
+    background: #3b3640;
+    border-radius: 10px;
+    border: 2px solid yellow;
+}
+.icon{
+    position: absolute;
+    top: 55%;
+    right: -3px;
+    transform: translate(-50%,-50%);
+    font-size: 22px;
+    color: yellow;
+    transition: .2s;
+}
+.box:hover .icon{
+    opacity: 0;
+    z-index: -1;
+    color: yellow;
 }
 

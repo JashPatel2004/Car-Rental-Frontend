@@ -2,14 +2,13 @@
 *:before,
 *:after{
     padding: 0%;
-    /* margin: 2%; */
     box-sizing: border-box;
 }
 
 form{
-    margin-top: 30px;
-    height: 462px;
-    width: 400px;
+    margin-top: 3vw;
+    height: 75vh;
+    width: 27vw;
     background-color: rgba(255,255,255,0.13);
     position: absolute;
     transform: translate(-50%,-50%);
@@ -19,36 +18,34 @@ form{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    border-radius: 10px;
-    backdrop-filter: blur(10px);
-    border: 2px solid rgba(255,255,255,0.1);
-    box-shadow: 0 0 40px rgba(8,7,16,0.6);
-    /* padding: 30px 3px; */
+    border-radius: 1vw;
+    backdrop-filter: blur(1vw);
+    box-shadow: 0 0 5vw rgba(8,7,16,0.6);
 }
 form *{
     font-family: 'Poppins',sans-serif;
     /* color: #ffffff; */
-    letter-spacing: 0.5px;
+    letter-spacing: 0.06vw;
     outline: none;
     border: none;
 }
 form h3{
-    font-size: 32px;
+    font-size: 3vw;
     font-weight: 500;
-    line-height: 42px;
+    line-height: 4vw;
     text-align: center;
     color: white;
 }
 
 input{
     display: block;
-    height: 50px;
+    height: 4vw;
     width: 90%;
     background-color: rgba(255,255,255,0.07);
-    border-radius: 3px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 14px;
+    border-radius: 0.4vw;
+    padding: 0 1.2vw;
+    margin-top: 1vw;
+    font-size: 1vw;
     font-weight: 300;
     color: white;
 }
@@ -56,18 +53,141 @@ input{
     color: #e5e5e5;
 }
 .login-btn{
-    margin-top: 10px;
-    /* margin-right: 50px; */
+    margin-top: 1vw;
     width: 90%;
     background-color: #ffffff;
-    color: #4d4d4f;
-    padding: 15px 0;
-    font-size: 18px;
+    color: black;
+    padding: 1.4vw 0;
+    font-size: 1.5vw;
     font-weight: 600;
-    border-radius: 5px;
+    border-radius: 0.6vw;
     cursor: pointer;
 }
 
 .error{
     color: red;
+}
+
+@media (max-width: 320px) {
+    form {
+        width: 80vw;
+        height: 50vh;
+        border-radius: 5vw;
+    }
+
+    form h3 {
+        font-size: 6vw;
+        line-height: 8vw;
+    }
+
+    input {
+        height: 8vw;
+        padding: 0 3vw;
+        font-size: 3vw;
+    }
+
+    .login-btn {
+        padding: 3vw 0;
+        font-size: 4vw;
+    }
+}
+
+/* Mobile (Portrait) */
+@media (min-width: 321px) and (max-width: 480px) {
+    form {
+        width: 60vw;
+        height: 50vh;
+        border-radius: 4vw;
+    }
+
+    form h3 {
+        font-size: 5vw;
+        line-height: 7vw;
+    }
+
+    input {
+        height: 7vw;
+        padding: 0 2.5vw;
+        font-size: 2.5vw;
+    }
+
+    .login-btn {
+        padding: 2.5vw 0;
+        font-size: 3.5vw;
+    }
+}
+
+/* Large Mobile (Portrait) */
+@media (min-width: 481px) and (max-width: 767px) {
+    form {
+        width: 50vw;
+        height: 70vh;
+        border-radius: 3vw;
+    }
+
+    form h3 {
+        font-size: 4vw;
+        line-height: 6vw;
+    }
+
+    input {
+        height: 6vw;
+        padding: 0 2vw;
+        font-size: 2vw;
+    }
+
+    .login-btn {
+        padding: 2vw 0;
+        font-size: 2.5vw;
+    }
+}
+
+/* Small Tablet (Portrait) */
+@media (min-width: 768px) and (max-width: 991px) {
+    form {
+        width: 40vw;
+        height: 70vh;
+        border-radius: 2vw;
+    }
+
+    form h3 {
+        font-size: 3.5vw;
+        line-height: 5.5vw;
+    }
+
+    input {
+        height: 5vw;
+        padding: 0 1.5vw;
+        font-size: 1.8vw;
+    }
+
+    .login-btn {
+        padding: 1.8vw 0;
+        font-size: 2vw;
+    }
+}
+
+/* Large Tablet (Portrait) */
+@media (min-width: 992px) and (max-width: 1024px) {
+    form {
+        width: 35vw;
+        height: 70vh;
+        border-radius: 1.5vw;
+    }
+
+    form h3 {
+        font-size: 3vw;
+        line-height: 5vw;
+    }
+
+    input {
+        height: 4.5vw;
+        padding: 0 1.2vw;
+        font-size: 1.5vw;
+    }
+
+    .login-btn {
+        padding: 1.5vw 0;
+        font-size: 2vw;
+    }
 }

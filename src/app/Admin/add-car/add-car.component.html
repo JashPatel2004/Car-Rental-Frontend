@@ -1,0 +1,25 @@
+<form>
+   <div class="imageUpload">
+    <div *ngIf="imageUrl" class="image-preview">
+        <img [src]="imageUrl" alt="Image preview">
+      </div>
+    <input type="file" (change)="onFileSelected($event)" accept="image/*">
+   </div>
+   <div class="grid">
+        <input class="input" type="text" placeholder="Manufacturer">
+        <input class="input" type="text" placeholder="Model">
+        <input class="input" type="text" placeholder="Year">
+        <input class="input" type="text" placeholder="Body Type">
+        <input class="input" type="text" placeholder="Mileage">
+        <input class="input" type="text" placeholder="License Plate Number">
+        <input class="input" type="text" placeholder="Transmission">
+        <input class="input" type="text" placeholder="Price">
+        <input class="input" type="text" placeholder="Seating Capacity">
+   </div>
+   <div class="des">
+    <textarea placeholder="Description" class="textArea" name="Description" id="" cols="92" rows="5"></textarea>
+    <button class="btn" type="submit">Add Car</button>
+   </div>
+</form>
+
+<router-outlet></router-outlet>

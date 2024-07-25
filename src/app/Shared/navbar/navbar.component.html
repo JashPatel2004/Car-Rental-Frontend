@@ -10,16 +10,21 @@
     </div>
 
     <ul class="inner" style="list-style: none;">
-        <li class="hover">
-            Search
-        </li>
-        <li class="hover">
-            Add car
-        </li>
-        <li class="hover">
+        <div class="box">
+            <form name="search">
+                <input type="text" class="input" name="txt" onmouseout="this.value = ''; this.blur();">
+            </form>
+            <mat-icon class="icon">search</mat-icon>
+        </div>
+        <a style="text-decoration: none;" routerLink="/add-car" class="hover">
+            <p>Add car</p>
+        </a>
+        <a class="hover">
             Bookings
-        </li>
+        </a>
     </ul>
    </div>
+
+   <router-outlet></router-outlet>
 
 <!-- </div> -->
