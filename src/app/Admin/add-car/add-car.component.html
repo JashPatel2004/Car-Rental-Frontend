@@ -1,23 +1,83 @@
-<form>
+<form [formGroup]="AddCar">
    <div class="imageUpload">
     <div *ngIf="imageUrl" class="image-preview">
         <img [src]="imageUrl" alt="Image preview">
       </div>
-    <input type="file" (change)="onFileSelected($event)" accept="image/*">
+    <input type="file" (change)="onFileSelected($event)" accept="image/*" formControlName="image">
+    <div *ngIf="isValid || AddCar.controls['image'].invalid && (AddCar.controls['image'].dirty || AddCar.controls['image'].touched)">
+      <small class="error" *ngIf="AddCar.controls['image'].hasError('required')">Image is required.</small>
+      </div>
    </div>
    <div class="grid">
-        <input class="input" type="text" placeholder="Manufacturer">
-        <input class="input" type="text" placeholder="Model">
-        <input class="input" type="text" placeholder="Year">
-        <input class="input" type="text" placeholder="Body Type">
-        <input class="input" type="text" placeholder="Mileage">
-        <input class="input" type="text" placeholder="License Plate Number">
-        <input class="input" type="text" placeholder="Transmission">
-        <input class="input" type="text" placeholder="Price">
-        <input class="input" type="text" placeholder="Seating Capacity">
+        <div>
+          <input class="input" type="text" placeholder="Manufacturer" formControlName="manufacturer">
+          <div *ngIf="isValid || AddCar.controls['manufacturer'].invalid && (AddCar.controls['manufacturer'].dirty || AddCar.controls['manufacturer'].touched)">
+          <small class="error" *ngIf="AddCar.controls['manufacturer'].hasError('required')">Manufacturer Name is required.</small>
+          </div>
+        </div>
+
+        <div>
+          <input class="input" type="text" placeholder="Model" formControlName="model">
+          <div *ngIf="isValid || AddCar.controls['model'].invalid && (AddCar.controls['model'].dirty || AddCar.controls['model'].touched)">
+            <small class="error" *ngIf="AddCar.controls['model'].hasError('required')">Model Name is required.</small>
+            </div>
+        </div>
+
+        <div>
+          <input class="input" type="text" placeholder="Year" formControlName="year">
+          <div *ngIf="isValid || AddCar.controls['year'].invalid && (AddCar.controls['year'].dirty || AddCar.controls['year'].touched)">
+            <small class="error" *ngIf="AddCar.controls['year'].hasError('required')"> Year is required.</small>
+            </div>
+        </div>
+
+        <div>
+          <input class="input" type="text" placeholder="Body Type" formControlName="bodytype">
+          <div *ngIf="isValid || AddCar.controls['bodytype'].invalid && (AddCar.controls['bodytype'].dirty || AddCar.controls['bodytype'].touched)">
+            <small class="error" *ngIf="AddCar.controls['bodytype'].hasError('required')">Body type is required.</small>
+            </div>
+        </div>
+
+        <div>
+          <input class="input" type="text" placeholder="Mileage" formControlName="mileage">
+          <div *ngIf="isValid || AddCar.controls['mileage'].invalid && (AddCar.controls['mileage'].dirty || AddCar.controls['mileage'].touched)">
+            <small class="error" *ngIf="AddCar.controls['mileage'].hasError('required')">Mileage is required.</small>
+            </div>
+        </div>
+
+        <div>
+          <input class="input" type="text" placeholder="License Plate Number" formControlName="licenseplate">
+          <div *ngIf="isValid || AddCar.controls['licenseplate'].invalid && (AddCar.controls['licenseplate'].dirty || AddCar.controls['licenseplate'].touched)">
+            <small class="error" *ngIf="AddCar.controls['licenseplate'].hasError('required')">License plate number is required.</small>
+            </div>
+        </div>
+
+        <div>
+          <input class="input" type="text" placeholder="Transmission" formControlName="transmission">
+          <div *ngIf="isValid || AddCar.controls['transmission'].invalid && (AddCar.controls['transmission'].dirty || AddCar.controls['transmission'].touched)">
+            <small class="error" *ngIf="AddCar.controls['transmission'].hasError('required')">Transmission type is required.</small>
+            </div>
+        </div>
+
+        <div>
+          <input class="input" type="text" placeholder="Price" formControlName="price">
+          <div *ngIf="isValid || AddCar.controls['price'].invalid && (AddCar.controls['price'].dirty || AddCar.controls['price'].touched)">
+            <small class="error" *ngIf="AddCar.controls['price'].hasError('required')">Price is required.</small>
+            </div>
+        </div>
+
+        <div>
+          <input class="input" type="text" placeholder="Seating Capacity" formControlName="seating">
+          <div *ngIf="isValid || AddCar.controls['seating'].invalid && (AddCar.controls['seating'].dirty || AddCar.controls['seating'].touched)">
+            <small class="error" *ngIf="AddCar.controls['seating'].hasError('required')">Seating Capacity is required.</small>
+            </div>
+        </div>
+
    </div>
    <div class="des">
-    <textarea placeholder="Description" class="textArea" name="Description" id="" cols="92" rows="5"></textarea>
+    <textarea formControlName="description" placeholder="Description" class="textArea" name="Description" id="" cols="92" rows="5"></textarea>
+    <div *ngIf="isValid || AddCar.controls['description'].invalid && (AddCar.controls['description'].dirty || AddCar.controls['description'].touched)">
+      <small class="error" *ngIf="AddCar.controls['description'].hasError('required')">Description is required.</small>
+      </div>
     <button class="btn" type="submit">Add Car</button>
    </div>
 </form>

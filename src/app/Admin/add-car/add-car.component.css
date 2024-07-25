@@ -26,7 +26,6 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     row-gap: 50px; 
-    justify-items: center;
     margin: 50px;
     column-gap: 20px;
 }
@@ -46,6 +45,7 @@
     font-size: 14px;
     font-weight: 300;
     color: white;
+    margin-bottom: 5px;
 }
 
 .textArea{
@@ -74,4 +74,10 @@
     margin-bottom: 20px;
     font-size: large;
     padding: 5px;
+}
+
+.error{
+  color: red;
+  display: flex;
+  justify-content: center;
 }
